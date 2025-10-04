@@ -1,0 +1,418 @@
+"use client"
+
+import { useState } from 'react'
+import { Check, Star, Users, TrendingUp, Calendar, BarChart3, Zap, ArrowRight, Play } from 'lucide-react'
+
+export default function SocialBoostPro() {
+  const [selectedPlan, setSelectedPlan] = useState('pro')
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+      {/* Header */}
+      <header className="container mx-auto px-4 py-6">
+        <nav className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-2xl font-bold text-white">SocialBoost Pro</span>
+          </div>
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#features" className="text-gray-300 hover:text-white transition-colors">Recursos</a>
+            <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Preços</a>
+            <a href="#testimonials" className="text-gray-300 hover:text-white transition-colors">Depoimentos</a>
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300">
+              Começar Grátis
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-20 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Automatize Suas
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Redes Sociais</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            Agende posts, analise performance e cresça sua audiência em todas as plataformas. 
+            <strong className="text-white"> Usado por +50.000 empresas no mundo todo.</strong>
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
+              <Play className="w-5 h-5" />
+              <span>Teste Grátis por 14 Dias</span>
+            </button>
+            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
+              Ver Demo ao Vivo
+            </button>
+          </div>
+
+          <div className="flex flex-wrap justify-center items-center gap-8 text-gray-400">
+            <div className="flex items-center space-x-2">
+              <Check className="w-5 h-5 text-green-400" />
+              <span>Sem cartão de crédito</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Check className="w-5 h-5 text-green-400" />
+              <span>Configuração em 2 minutos</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Check className="w-5 h-5 text-green-400" />
+              <span>Suporte 24/7</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">50K+</div>
+            <div className="text-gray-300">Empresas Ativas</div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">2M+</div>
+            <div className="text-gray-300">Posts Agendados</div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">300%</div>
+            <div className="text-gray-300">Aumento Médio</div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">4.9★</div>
+            <div className="text-gray-300">Avaliação</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Tudo que Você Precisa em Uma Plataforma
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Ferramentas profissionais para transformar suas redes sociais em máquinas de vendas
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
+              <Calendar className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">Agendamento Inteligente</h3>
+            <p className="text-gray-300 mb-6">
+              Agende posts para Instagram, Facebook, Twitter, LinkedIn e TikTok. 
+              IA sugere os melhores horários para máximo engajamento.
+            </p>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-center space-x-2">
+                <Check className="w-4 h-4 text-green-400" />
+                <span>Calendário visual</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Check className="w-4 h-4 text-green-400" />
+                <span>Posts em lote</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Check className="w-4 h-4 text-green-400" />
+                <span>Horários otimizados por IA</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+              <BarChart3 className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">Analytics Avançados</h3>
+            <p className="text-gray-300 mb-6">
+              Relatórios detalhados sobre performance, crescimento de seguidores, 
+              engajamento e ROI das suas campanhas.
+            </p>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-center space-x-2">
+                <Check className="w-4 h-4 text-green-400" />
+                <span>Dashboards em tempo real</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Check className="w-4 h-4 text-green-400" />
+                <span>Relatórios personalizados</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Check className="w-4 h-4 text-green-400" />
+                <span>Tracking de conversões</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-6">
+              <Users className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">Gestão de Equipe</h3>
+            <p className="text-gray-300 mb-6">
+              Colabore com sua equipe, defina permissões, aprove conteúdo 
+              e mantenha a consistência da marca.
+            </p>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-center space-x-2">
+                <Check className="w-4 h-4 text-green-400" />
+                <span>Múltiplos usuários</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Check className="w-4 h-4 text-green-400" />
+                <span>Fluxo de aprovação</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Check className="w-4 h-4 text-green-400" />
+                <span>Controle de permissões</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Planos que Cabem no Seu Bolso
+          </h2>
+          <p className="text-xl text-gray-300">
+            Comece grátis e escale conforme seu negócio cresce
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Starter Plan */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-2">Starter</h3>
+              <div className="text-4xl font-bold text-white mb-2">
+                R$ 29<span className="text-lg text-gray-300">/mês</span>
+              </div>
+              <p className="text-gray-300">Perfeito para começar</p>
+            </div>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">3 contas sociais</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">30 posts por mês</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">Analytics básicos</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">Suporte por email</span>
+              </li>
+            </ul>
+            <button className="w-full border-2 border-purple-400 text-purple-400 py-3 rounded-full font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
+              Começar Grátis
+            </button>
+          </div>
+
+          {/* Pro Plan */}
+          <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400 relative">
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                MAIS POPULAR
+              </span>
+            </div>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-2">Pro</h3>
+              <div className="text-4xl font-bold text-white mb-2">
+                R$ 79<span className="text-lg text-gray-300">/mês</span>
+              </div>
+              <p className="text-gray-300">Para empresas em crescimento</p>
+            </div>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">10 contas sociais</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">Posts ilimitados</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">Analytics avançados</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">5 membros da equipe</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">Suporte prioritário</span>
+              </li>
+            </ul>
+            <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300">
+              Começar Teste Grátis
+            </button>
+          </div>
+
+          {/* Enterprise Plan */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-2">Enterprise</h3>
+              <div className="text-4xl font-bold text-white mb-2">
+                R$ 199<span className="text-lg text-gray-300">/mês</span>
+              </div>
+              <p className="text-gray-300">Para grandes empresas</p>
+            </div>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">Contas ilimitadas</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">Posts ilimitados</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">Analytics personalizados</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">Equipe ilimitada</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Check className="w-5 h-5 text-green-400" />
+                <span className="text-gray-300">Gerente dedicado</span>
+              </li>
+            </ul>
+            <button className="w-full border-2 border-purple-400 text-purple-400 py-3 rounded-full font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
+              Falar com Vendas
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section id="testimonials" className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            O Que Nossos Clientes Dizem
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="flex items-center mb-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+              ))}
+            </div>
+            <p className="text-gray-300 mb-6">
+              "Aumentamos nosso engajamento em 400% em apenas 3 meses. 
+              A ferramenta é incrível e o suporte é excepcional!"
+            </p>
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
+                <span className="text-white font-semibold">MC</span>
+              </div>
+              <div>
+                <div className="text-white font-semibold">Maria Clara</div>
+                <div className="text-gray-400 text-sm">CEO, Fashion Brand</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="flex items-center mb-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+              ))}
+            </div>
+            <p className="text-gray-300 mb-6">
+              "Economizo 15 horas por semana com o agendamento automático. 
+              Agora posso focar no que realmente importa: criar conteúdo."
+            </p>
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full flex items-center justify-center">
+                <span className="text-white font-semibold">RS</span>
+              </div>
+              <div>
+                <div className="text-white font-semibold">Rafael Santos</div>
+                <div className="text-gray-400 text-sm">Influencer Digital</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="flex items-center mb-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+              ))}
+            </div>
+            <p className="text-gray-300 mb-6">
+              "Os relatórios são fantásticos! Conseguimos identificar exatamente 
+              qual conteúdo gera mais vendas e otimizar nossa estratégia."
+            </p>
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center">
+                <span className="text-white font-semibold">AL</span>
+              </div>
+              <div>
+                <div className="text-white font-semibold">Ana Luiza</div>
+                <div className="text-gray-400 text-sm">Marketing Manager</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="container mx-auto px-4 py-20">
+        <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Pronto para Revolucionar Suas Redes Sociais?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Junte-se a mais de 50.000 empresas que já transformaram sua presença digital. 
+            Teste grátis por 14 dias, sem compromisso.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
+              <TrendingUp className="w-5 h-5" />
+              <span>Começar Teste Grátis</span>
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300">
+              Agendar Demo
+            </button>
+          </div>
+          <p className="text-gray-400 mt-4 text-sm">
+            ✓ Sem cartão de crédito ✓ Configuração em 2 minutos ✓ Cancele quando quiser
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="container mx-auto px-4 py-12 border-t border-white/20">
+        <div className="text-center text-gray-400">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
+              <Zap className="w-4 h-4 text-white" />
+            </div>
+            <span className="text-xl font-bold text-white">SocialBoost Pro</span>
+          </div>
+          <p>© 2024 SocialBoost Pro. Todos os direitos reservados.</p>
+          <p className="mt-2">Transformando redes sociais em máquinas de vendas desde 2020.</p>
+        </div>
+      </footer>
+    </div>
+  )
+}
